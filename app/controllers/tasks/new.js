@@ -14,7 +14,7 @@ export default Ember.Controller.extend({
       //alert(title);
 
       //create new task
-      //var newTask = this.store.createRecord();
+      var newTask = this.store.createRecord();
     }
   }
 
