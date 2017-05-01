@@ -15,21 +15,21 @@
     {{content-for "head-footer"}}
   </head>
   <body>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+      <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB8vwLx-tklgez50SZwZAd-LUly8POSoYI",
+        authDomain: "emtasks-dc57b.firebaseapp.com",
+        databaseURL: "https://emtasks-dc57b.firebaseio.com",
+        projectId: "emtasks-dc57b",
+        storageBucket: "emtasks-dc57b.appspot.com",
+        messagingSenderId: "935581431823"
+      };
+      firebase.initializeApp(config);
+      </script>
     {{content-for "body"}}
 
-        <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-            <script>
-              // Initialize Firebase
-              var config = {
-                apiKey: "AIzaSyB8vwLx-tklgez50SZwZAd-LUly8POSoYI",
-                authDomain: "emtasks-dc57b.firebaseapp.com",
-                databaseURL: "https://emtasks-dc57b.firebaseio.com",
-                projectId: "emtasks-dc57b",
-                storageBucket: "emtasks-dc57b.appspot.com",
-                messagingSenderId: "935581431823"
-              };
-              firebase.initializeApp(config);
-            </script>
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/mtasks.js"></script>

@@ -14,7 +14,21 @@ export default Ember.Controller.extend({
       //alert(title);
 
       //create new task
-      var newTask = this.store.createRecord();
+      var newTask = this.store.createRecord('task', {
+        title: title,
+        description: description,
+        date: new Date(date)
+      });
+
+      //save to firebase
+      newTask.save();
+
+      //clear form
+      this.setProperties({
+        title: '',
+        description: '',
+        date: ''
+      });
     }
   }
 
